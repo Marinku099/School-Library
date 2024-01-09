@@ -158,6 +158,8 @@ p.filter-bar {
     flex-shrink: 0;
     border-radius: 52px;
     background: #363636;
+
+    transition: all .2s ease;
 }
 
 .genre-bttn .content{
@@ -173,6 +175,7 @@ p.filter-bar {
     position: absolute;
     display: none;
 
+    transition: all .2s ease-in;
     background-color: #363636;
 }
 
@@ -195,12 +198,10 @@ p.filter-bar {
     background-color: rgb(79, 79, 79);
 }
 
-.genre-bttn .filter-bttn:active {
-    background-color: #1782FF;
-}
-
 .genre-bttn button:active ~ .content{
     display: block;
+    transform: translate(0px,10px);
+    transition: all .2s ease-out;
 }
 
 .head-section {

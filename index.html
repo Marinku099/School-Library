@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>School Library</title>
     
+    <script src="frontend.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -35,10 +36,10 @@
           <p class="filter-bar">ตัวกรอง</p>
           <div class="filters">
             <div class="genre-bttn">
-              <button class="filter-bttn" >หมวดหมู่
+              <button class="filter-bttn" onclick="toggleFilterGenre()" id="genre">หมวดหมู่
                 <img src="images/arrow-down.svg">
               </button>
-              <div class="content">
+              <div class="content" id="genre-content">
                 <button id="math">คณิตศาสตร์</button>
                 <button id="math">คณิตศาสตร์</button>
                 <button id="math">คณิตศาสตร์</button>
@@ -52,7 +53,7 @@
                 
               </div>
             </div>
-            <button class="filter-bttn" ><span>ถูกยืมแล้ว</span></button>
+            <button class="filter-bttn" id="avail"><span>ถูกยืมแล้ว</span></button>
           </div>
         </div>
     </header>
