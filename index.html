@@ -11,7 +11,7 @@
     <header>
       <div class="container">
         <img class="logo" src="images/logo-main.png"></img>
-        <img class="bttn" src="images/login-admin.png" href="#"></img>
+        <button class="login-bttn" onclick="adminLogin()"><img class="bttn" src="images/login-admin.png" href="#"></img></button>
       </div>
       <div class="header-info">
         <p class="inst">ค้นหาหนังสือ</p>
@@ -25,26 +25,34 @@
             <h4 class="title">8/1/2024</h3>
           </div>
         </div>
-        <div class="search-bar">
-          <div class="search-text">
-            <p class="text">ค้นหา</p>
-          </div>
-          <div class="icon">
-            <img src="/images/circle-button.svg"></img>
-          </div>
+        <div class="search">
+          <input class="search-bar" placeholder="ค้นหา"></input>
+          <button class="icon" onclick="search()"></button>
         </div>
       </div>
         
         <div class="filter-bar">
           <p class="filter-bar">ตัวกรอง</p>
           <div class="filters">
-            <div class="filter-bttn">
-              <span class="filter-bttn-text" >หมวดหมู่</span>
-              <img src="images/arrow-down.svg">
+            <div class="genre-bttn">
+              <button class="filter-bttn" >หมวดหมู่
+                <img src="images/arrow-down.svg">
+              </button>
+              <div class="content">
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                <button id="math">คณิตศาสตร์</button>
+                
+              </div>
             </div>
-            <div class="filter-bttn">
-              <span class="filter-bttn-text" >ถูกยืมแล้ว</span>
-            </div>
+            <button class="filter-bttn" ><span>ถูกยืมแล้ว</span></button>
           </div>
         </div>
     </header>
@@ -59,6 +67,14 @@
             <h3>Author</h2>
           </div>
         </button>
+        <button class="book-card" onclick="readCard()">
+          <img class="thmb-book" src="#">
+          <div class="book-info">
+            <h2>Title</h1>
+            <h3>Author</h2>
+          </div>
+        </button>
+        
       </div>
     </section>
   </body>
