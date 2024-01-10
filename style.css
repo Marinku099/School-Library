@@ -34,6 +34,11 @@ button:active {
     background-color: black;
  }
 
+header {
+    position: sticky;
+    top: -320px;
+}
+
  .header-info {
     width: 100%;
     height: fit-content;
