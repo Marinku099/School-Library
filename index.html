@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>School Library</title>
     
-    <script src="frontend.js"></script>
+    
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -40,20 +40,23 @@
                 <img src="images/arrow-down.svg">
               </button>
               <div class="content" id="genre-content">
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
-                <button id="math">คณิตศาสตร์</button>
+                <button onclick="toggleFilterGenre()">ยกเลิกตัวกรอง</button>
+                <button onclick="genreSelect('computer')">วิทยาการคอมพิวเตอร์ สารสนเทศ และงานทั่วไป</button>
+                <button onclick="genreSelect('philosophy')">ปรัชญาและจิตวิทยา</button>
+                <button onclick="genreSelect('religion')">ศาสนา</button>
+                <button onclick="genreSelect('social')">สังคมศาสตร์</button>
+                <button onclick="genreSelect('language')">ภาษา</button>
+                <button onclick="genreSelect('science')">วิทยาศาสตร์</button>
+                <button onclick="genreSelect('technology')">เทคโนโลยี</button>
+                <button onclick="genreSelect('art')">ศิลปะและนันทนาการ</button>
+                <button onclick="genreSelect('literature')">วรรณกรรม</button>
+                <button onclick="genreSelect('history')">ประวัติศาสตร์และภูมิศาสตร์</button>
+                <button onclick="genreSelect('novel')">นวนิยาย</button>
+                <button onclick="genreSelect('shortstory')">เรื่องสั้น</button>
                 
               </div>
             </div>
-            <button class="filter-bttn" id="avail"><span>ถูกยืมแล้ว</span></button>
+            <button class="filter-bttn" onclick="toggleFilterAvail()" id="avail"><span>ถูกยืมแล้ว</span></button>
           </div>
         </div>
     </header>
@@ -78,5 +81,6 @@
         
       </div>
     </section>
+    <script src="frontend.js"></script>
   </body>
 </html>

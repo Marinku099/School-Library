@@ -20,6 +20,7 @@ button {
 button:active {
     transition:all .1s ease;
     transform:scale(.9);
+
 }
 
  .container {
@@ -69,19 +70,20 @@ h1.title {
 
 .search {
     width: 100%;
+    gap: 5px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     margin-bottom: 5px;
 }
 
 .search-bar{
     display: flex;
-    width: 80%;
+    flex: 1;
     max-width: 400px;
+    min-width: none;
     padding: 5px 6px 5px 27px;
     justify-content:space-between;
     align-items: center;
-    flex-shrink: 0;
 
     font-size: 16pt;
     font-weight: 200;
@@ -102,7 +104,7 @@ button.icon {
     border-radius: 100%;
     
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -186,12 +188,13 @@ p.filter-bar {
 
 .genre-bttn .content button{
     width: 100%;
-    padding: 3px 10px;
+    padding: 10px 10px;
 
     text-align: left;
     font-size: 12pt;
     color: #F0F0F0;
     background-color: #363636;
+    transition: all .2s ease;
 }
 
 .genre-bttn .content button:hover{
@@ -200,8 +203,8 @@ p.filter-bar {
 
 .genre-bttn button:active ~ .content{
     display: block;
-    transform: translate(0px,10px);
-    transition: all .2s ease-out;
+    transform: scale(.95);
+    transition: all .1s ease;
 }
 
 .head-section {
