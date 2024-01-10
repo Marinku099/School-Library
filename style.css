@@ -252,6 +252,8 @@ p.filter-bar {
 
 .book-card-table {
     width: 100%;
+
+    min-height: min-content;
     max-height: 97px;
 
     padding: 20px;
@@ -264,7 +266,7 @@ p.filter-bar {
 }
 
 .book-card-table .head {
-    min-width: min-content;
+    min-width: 150px;
     padding: 10px;
     font-size: 8pt;
 
