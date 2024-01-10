@@ -32,15 +32,15 @@
         </div>
       </div>
         
-        <div class="filter-bar">
-          <p class="filter-bar">ตัวกรอง</p>
+        <div class="filter-bar" id="main-filter-bar">
+          <p class="filter-bar" >ตัวกรอง</p>
           <div class="filters">
             <div class="genre-bttn">
               <button class="filter-bttn" onclick="toggleFilterGenre()" id="genre">หมวดหมู่
                 <img src="images/arrow-down.svg">
               </button>
               <div class="content" id="genre-content">
-                <button onclick="toggleFilterGenre()">ยกเลิกตัวกรอง</button>
+                <button onclick="toggleFilterGenre(false)">ยกเลิกตัวกรอง</button>
                 <button onclick="genreSelect('computer')">วิทยาการคอมพิวเตอร์ สารสนเทศ และงานทั่วไป</button>
                 <button onclick="genreSelect('philosophy')">ปรัชญาและจิตวิทยา</button>
                 <button onclick="genreSelect('religion')">ศาสนา</button>
@@ -56,7 +56,7 @@
                 
               </div>
             </div>
-            <button class="filter-bttn" onclick="toggleFilterAvail()" id="avail"><span>ถูกยืมแล้ว</span></button>
+            <button class="filter-bttn" onclick="toggleFilterAvail()" id="avail"><span>ยังไม่ยืม</span></button>
           </div>
         </div>
     </header>
@@ -65,14 +65,35 @@
       <div class="book-result">
 
         <button class="book-card" onclick="readCard()">
-          <img class="thmb-book" src="#">
+          <img class="thmb-book" src="book-covers/เด็กน้อยโตเข้าหาแสง.jpg">
           <div class="book-info">
             <h2>Title</h1>
             <h3>Author</h2>
           </div>
         </button>
         <button class="book-card" onclick="readCard()">
-          <img class="thmb-book" src="#">
+          <img class="thmb-book" src="book-covers/Japan-Salary-man-เป็นได้มากว่ามนุษย์เงินเดือน.jpg">
+          <div class="book-info">
+            <h2>Title</h1>
+            <h3>Author</h2>
+          </div>
+        </button>
+        <button class="book-card" onclick="readCard()">
+          <img class="thmb-book" src="book-covers/วิ่งได้ ไม่ใช่แค่ได้วิ่ง.jpg">
+          <div class="book-info">
+            <h2>Title</h1>
+            <h3>Author</h2>
+          </div>
+        </button>
+        <button class="book-card" onclick="readCard()">
+          <img class="thmb-book" src="https://storage.naiin.com/system/application/bookstore/resource/product/202304/577274/1000260516_front_XXXL.jpg?imgname=%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%94%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%81">
+          <div class="book-info">
+            <h2>Title</h1>
+            <h3>Author</h2>
+          </div>
+        </button>
+        <button class="book-card" onclick="readCard()">
+          <img class="thmb-book" src="https://storage.naiin.com/system/application/bookstore/resource/product/202304/578158/1000260691_front_XXXL.jpg?imgname=%E0%B8%AD%E0%B8%B2%E0%B9%82%E0%B8%9B%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%9A%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%AD%E0%B8%87">
           <div class="book-info">
             <h2>Title</h1>
             <h3>Author</h2>

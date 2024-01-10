@@ -14,46 +14,49 @@ let GENRE = {
 }
 
 let toggleGenre = false;
+let currentGenre;
 
 const body = document.body
 const genre = document.getElementById("genre");
 const content = document.getElementById("genre-content");
 
-function toggleFilterGenre() {
+function toggleFilterGenre(toggleGenre) {
     if (content.style.display == "" || content.style.display == "none") {
-        toggleGenre = true
-        genre.style.backgroundColor = "#1782FF";
         content.style.display = "block";
     }else{
-        toggleGenre = false;
+        if (toggleGenre == false){
+            genre.style.backgroundColor = "#363636";
+            genre.innerHTML = "หมวดหมู่";
 
-        genre.style.backgroundColor = "#363636";
+            currentGenre = null;
+        }
         content.style.display = "none";
     }
 }
 
-let currentGenre;
+
 function genreSelect(currentGenre) {
+    toggleGenre = true;
+    genre.style.backgroundColor = "#1782FF";
+
     console.log(currentGenre);
     content.style.display = "none";
-    /*
     let outGenre = GENRE[currentGenre];
-    let filterBar = document.getElementsByClassName("filters")
+    let filterBar = document.getElementById("main-filter-bar");
 
-    if (outGenre.length * 7.8 + 10 > filterBar.clientWidth) {
-        let maxLen = Math.floor((filterBar.clientWidth) / 7.8);
+    if (outGenre.length * 7.8 + 10 > filterBar.clientWidth - 270 - 28) {
+        let maxLen = Math.floor((filterBar.clientWidth - 270 - 28) / 7.8);
 
         outGenre = outGenre.slice(0, maxLen + 1) + '...';
-        console.log(outGenre)
-    }*/
-    genre.innerHTML = GENRE[currentGenre];
+    }
+    genre.innerHTML = outGenre;
 }
 
-let toggleAvail = true
+let toggleAvail = true;
 function toggleFilterAvail() {
     let avail = document.getElementById("avail");
     if (toggleAvail) {
-        toggleAvail = false
+        toggleAvail = false;
         avail.style.backgroundColor = "#1782FF";
     }else{
         toggleAvail = true;
