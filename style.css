@@ -229,8 +229,7 @@ p.filter-bar {
 .book-card {
     display: flex;
     flex-direction: column;
-    width: 48%;
-    min-width: 160px;
+    width: 80%;
     max-width: 180px;
     height: 280px;
 
@@ -265,4 +264,96 @@ p.filter-bar {
 
 .book-info h3 {
     font-weight: 200;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.50);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-book-card {
+    width: 90vw;
+    height: max-content;
+    border-radius: 15px;
+    padding: 20px;
+
+    
+
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.model-book-card::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.modal-details {
+    padding: 20px 10px;
+    display: inline;
+
+    flex-grow: 1;
+}
+
+.modal-details p {
+    line-height: 25px;
+}
+
+.modal-thmbnl {
+    padding: 10px;
+    width: 100%;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal-thmbnl img {
+    border-radius: 15px;
+    max-height: 500px;
+    
+    margin: 10px;
+
+    object-fit: contain;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.status-avail {
+    padding: 8px 30px;
+    margin-bottom: 2px;
+
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 20px;
+    background-color: #FFF;
+}
+
+button.card-close {
+    padding: 20px;
+    border-radius: 100%;
+    background-color: #ff5959;
+    fill: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    position: absolute;
+    right: 7vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }

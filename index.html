@@ -36,7 +36,8 @@
           <p class="filter-bar" >ตัวกรอง</p>
           <div class="filters">
             <div class="genre-bttn">
-              <button class="filter-bttn" onclick="toggleFilterGenre()" id="genre">หมวดหมู่
+              <button class="filter-bttn" onclick="toggleFilterGenre()" id="genre">
+                <p>หมวดหมู่</p>
                 <img src="images/arrow-down.svg">
               </button>
               <div class="content" id="genre-content">
@@ -53,7 +54,6 @@
                 <button onclick="genreSelect('history')">ประวัติศาสตร์และภูมิศาสตร์</button>
                 <button onclick="genreSelect('novel')">นวนิยาย</button>
                 <button onclick="genreSelect('shortstory')">เรื่องสั้น</button>
-                
               </div>
             </div>
             <button class="filter-bttn" onclick="toggleFilterAvail()" id="avail"><span>ยังไม่ยืม</span></button>
@@ -79,29 +79,57 @@
           </div>
         </button>
         <button class="book-card" onclick="readCard()">
-          <img class="thmb-book" src="book-covers/วิ่งได้ ไม่ใช่แค่ได้วิ่ง.jpg">
+          <img class="thmb-book" src="book-covers/Japan-Salary-man-เป็นได้มากว่ามนุษย์เงินเดือน.jpg">
           <div class="book-info">
             <h2>Title</h1>
             <h3>Author</h2>
           </div>
         </button>
         <button class="book-card" onclick="readCard()">
-          <img class="thmb-book" src="https://storage.naiin.com/system/application/bookstore/resource/product/202304/577274/1000260516_front_XXXL.jpg?imgname=%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%94%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%81">
+          <img class="thmb-book" src="book-covers/Japan-Salary-man-เป็นได้มากว่ามนุษย์เงินเดือน.jpg">
           <div class="book-info">
             <h2>Title</h1>
             <h3>Author</h2>
           </div>
         </button>
         <button class="book-card" onclick="readCard()">
-          <img class="thmb-book" src="https://storage.naiin.com/system/application/bookstore/resource/product/202304/578158/1000260691_front_XXXL.jpg?imgname=%E0%B8%AD%E0%B8%B2%E0%B9%82%E0%B8%9B%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%9A%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%AD%E0%B8%87">
+          <img class="thmb-book" src="book-covers/Japan-Salary-man-เป็นได้มากว่ามนุษย์เงินเดือน.jpg">
           <div class="book-info">
             <h2>Title</h1>
             <h3>Author</h2>
           </div>
         </button>
-        
       </div>
     </section>
+    <div class="modal">
+      <div class="modal-bg"></div>
+      <div class="modal-book-card">
+        <button class="card-close">
+          <svg width="30" height="30" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94755 0.0524494L0.552491 4.44751L20.605 24.5L0.552489 44.5525L4.94755 48.9476L25 28.8951L45.0525 48.9475L49.4475 44.5524L29.3951 24.5L49.4475 4.44756L45.0525 0.0524991L25 20.1049L4.94755 0.0524494Z" fill="white"/>
+          </svg>
+        </button>
+        <div class="modal-thmbnl">
+          <img src="book-covers/ก้าวที่พลาด.jpg">
+          <div class="status-avail">Unavailable</div>
+          <h5>2 weeks ago</h5>
+        </div>
+        <div class="modal-details">
+          <h2>ตลก</h2>
+          <h1>นิกก้านิกกัส</h1>
+          <p>
+            <b>ผู้แต่ง</b> : นายนิกก่า เดอะสกา 
+            <br><b>หมวดหมู่</b> : ชีวะวิทยา 
+            <br><b>ISBN</b> : 987-616-426-45-9 
+            <br><b>สำนักพิมพ์</b> : นิกกล้าพับบลิชชิ่ง 
+            <br><b>สถานที่พิมพ์</b> : บ้านนายนิก กรุงเทพฯ 
+            <br><b>จำนวนหน้า</b> : 255 
+            <br><b>เลขหมู่</b> : 155.41 
+            <br><b>เลขประจำหนังสือ</b> : ม-ต 
+          </p>
+        </div>
+      </div>
+    </div>
     <script src="frontend.js"></script>
   </body>
 </html>

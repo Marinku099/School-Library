@@ -26,8 +26,7 @@ function toggleFilterGenre(toggleGenre) {
     }else{
         if (toggleGenre == false){
             genre.style.backgroundColor = "#363636";
-            genre.innerHTML = "หมวดหมู่";
-
+            genre.getElementsByTagName('p')[0].innerHTML = "หมวดหมู่";
             currentGenre = null;
         }
         content.style.display = "none";
@@ -38,18 +37,18 @@ function toggleFilterGenre(toggleGenre) {
 function genreSelect(currentGenre) {
     toggleGenre = true;
     genre.style.backgroundColor = "#1782FF";
-
     console.log(currentGenre);
     content.style.display = "none";
     let outGenre = GENRE[currentGenre];
     let filterBar = document.getElementById("main-filter-bar");
 
-    if (outGenre.length * 7.8 + 10 > filterBar.clientWidth - 270 - 28) {
-        let maxLen = Math.floor((filterBar.clientWidth - 270 - 28) / 7.8);
+    if (outGenre.length * 7.8 + 10 > filterBar.clientWidth - 300 - 28) {
+        let maxLen = Math.floor((filterBar.clientWidth - 300 - 28) / 7.8);
 
         outGenre = outGenre.slice(0, maxLen + 1) + '...';
     }
-    genre.innerHTML = outGenre;
+    
+    genre.getElementsByTagName('p')[0].innerHTML = outGenre;
 }
 
 let toggleAvail = true;
