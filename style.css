@@ -20,6 +20,7 @@ button {
 button:active {
     transition:all .1s ease;
     transform:scale(.9);
+
 }
 
  .container {
@@ -39,7 +40,9 @@ button:active {
     padding: 30px 20px 20px 20px;
     background-size:cover;
     background-repeat:no-repeat;
-    background-image: url(/images/photo-of-multicolored-illustration-2832382.png);
+    background-position: bottom;
+    
+    background-image: url(https://images.unsplash.com/photo-1584968124544-d10ce10dd21f?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
  }
 
  .header-title {
@@ -69,19 +72,20 @@ h1.title {
 
 .search {
     width: 100%;
+    gap: 5px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     margin-bottom: 5px;
 }
 
 .search-bar{
     display: flex;
-    width: 80%;
+    flex: 1;
     max-width: 400px;
+    min-width: 0;
     padding: 5px 6px 5px 27px;
     justify-content:space-between;
     align-items: center;
-    flex-shrink: 0;
 
     font-size: 16pt;
     font-weight: 200;
@@ -102,7 +106,7 @@ button.icon {
     border-radius: 100%;
     
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -158,6 +162,8 @@ p.filter-bar {
     flex-shrink: 0;
     border-radius: 52px;
     background: #363636;
+
+    transition: all .2s ease;
 }
 
 .genre-bttn .content{
@@ -173,6 +179,7 @@ p.filter-bar {
     position: absolute;
     display: none;
 
+    transition: all .2s ease-in;
     background-color: #363636;
 }
 
@@ -183,24 +190,23 @@ p.filter-bar {
 
 .genre-bttn .content button{
     width: 100%;
-    padding: 3px 10px;
+    padding: 10px 10px;
 
     text-align: left;
     font-size: 12pt;
     color: #F0F0F0;
     background-color: #363636;
+    transition: all .2s ease;
 }
 
 .genre-bttn .content button:hover{
     background-color: rgb(79, 79, 79);
 }
 
-.genre-bttn .filter-bttn:active {
-    background-color: #1782FF;
-}
-
 .genre-bttn button:active ~ .content{
     display: block;
+    transform: scale(.95);
+    transition: all .1s ease;
 }
 
 .head-section {
@@ -222,12 +228,13 @@ p.filter-bar {
 
 .book-card {
     display: flex;
+    flex-direction: column;
     width: 48%;
-    max-width: 208px;
-    height: 208px;
+    min-width: 160px;
+    max-width: 180px;
+    height: 280px;
 
     padding: 6.934px 7.157px 8.108px 6.934px;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -240,9 +247,14 @@ p.filter-bar {
 }
 
 .thmb-book {
+    margin-bottom: 10px;
     width: 100%;
-    height: 90%;
+    height: 80%;
+    max-height: 200px;
     border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    object-fit: cover;
 }
 
 .book-info {
